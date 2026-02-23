@@ -1,5 +1,20 @@
 # Polyglot Enterprise DevOps Platform
 
+![Stars](https://img.shields.io/github/stars/satya66123/polyglot-enterprise-devops)
+![Forks](https://img.shields.io/github/forks/satya66123/polyglot-enterprise-devops)
+![Issues](https://img.shields.io/github/issues/satya66123/polyglot-enterprise-devops)
+![License](https://img.shields.io/github/license/satya66123/polyglot-enterprise-devops)
+![Last Commit](https://img.shields.io/github/last-commit/satya66123/polyglot-enterprise-devops)
+![Repo Size](https://img.shields.io/github/repo-size/satya66123/polyglot-enterprise-devops)
+
+[![Tech Stack](https://skillicons.dev/icons?i=java,spring,react,nodejs,mongodb,mysql,docker,kubernetes,aws,git,github)](https://skillicons.dev)
+
+![Architecture](https://img.shields.io/badge/architecture-microservices-blue)
+![DevOps](https://img.shields.io/badge/devops-enterprise-orange)
+![Status](https://img.shields.io/badge/status-active-success)
+
+# Polyglot Enterprise DevOps
+
 Enterprise-grade polyglot microservices platform demonstrating multi-language backends, multi-database integration, advanced querying, and full DevOps orchestration.**Polyglot Enterprise DevOps Platform | Docker, Kubernetes, Helm, Python, Node.js, Spring Boot, PHP, MySQL, MongoDB**
 Designed and developed an enterprise-grade polyglot microservices platform integrating Python, Node.js, Spring Boot, and PHP services with both MySQL and MongoDB databases. Implemented advanced SQL JOIN queries and MongoDB aggregation pipelines to demonstrate multi-database access patterns. Containerized all services using Docker and orchestrated deployments via Kubernetes with Helm charts. Configured Nginx API Gateway for unified routing across microservices and automated container builds using GitHub Actions CI/CD. Demonstrates expertise in microservices architecture, DevOps orchestration, and multi-language backend engineering.
 
@@ -109,7 +124,6 @@ PHP
 
 ## ▶️ Run Locally (Docker)
 
-```bash
 docker compose up --build
 
 Gateway test:
@@ -189,7 +203,7 @@ Polyglot Enterprise DevOps Portfolio Project
 Designed to demonstrate enterprise backend and DevOps engineering skills.
 
 
-🏗 Architecture Diagram
+```🏗 Architecture Diagram
 4
 
 Architecture explanation (for interviews):
