@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: polyglotdb
+    volumes:
+      - ./database/mysql-schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  mongo:
+    image: mongo:6
+    volumes:
+      - ./database/mongo-init.js:/docker-entrypoint-initdb.d/init.js
+
+  python:
+    build:
+      context: .
+      dockerfile: docker/python.Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on: [mysql,mongo]
+
+  node:
+    build:
+      context: .
+      dockerfile: docker/node.Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on: [mysql,mongo]
+
+  spring:
+    build:
+      context: .
+      dockerfile: docker/springboot.Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on: [mysql,mongo]
+
+  php:
+    build:
+      context: .
+      dockerfile: docker/php.Dockerfile
+    ports:
+      - "8000:80"
+    depends_on: [mysql,mongo]
