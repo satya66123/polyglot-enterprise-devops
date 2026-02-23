@@ -1,0 +1,28 @@
+apiVersion: v2
+name: polyglot-enterprise
+description: Polyglot Enterprise DevOps Platform with Python, Node.js, Spring Boot, PHP, MySQL, MongoDB, API Gateway, and Kubernetes
+type: application
+
+version: 0.1.0
+appVersion: "1.0.0"
+
+keywords:
+  - polyglot
+  - microservices
+  - devops
+  - kubernetes
+  - mysql
+  - mongodb
+  - python
+  - nodejs
+  - springboot
+  - php
+
+home: https://github.com/YOUR_USERNAME/polyglot-enterprise-devops
+
+sources:
+  - https://github.com/YOUR_USERNAME/polyglot-enterprise-devops
+
+maintainers:
+  - name: Your Name
+    email: your.email@example.com

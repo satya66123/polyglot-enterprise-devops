@@ -1,0 +1,12 @@
+name: Build Images
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: docker build -f docker/python.Dockerfile .
+    - run: docker build -f docker/node.Dockerfile .
+    - run: docker build -f docker/springboot.Dockerfile .
+    - run: docker build -f docker/php.Dockerfile .

@@ -1,0 +1,49 @@
+replicaCount: 1
+
+image:
+  python:
+    repository: polyglot-python
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  node:
+    repository: polyglot-node
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  spring:
+    repository: polyglot-spring
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  php:
+    repository: polyglot-php
+    tag: latest
+    pullPolicy: IfNotPresent
+
+service:
+  python:
+    port: 5000
+    type: ClusterIP
+
+  node:
+    port: 3000
+    type: ClusterIP
+
+  spring:
+    port: 8080
+    type: ClusterIP
+
+  php:
+    port: 80
+    type: ClusterIP
+
+mysql:
+  image: mysql:8
+  rootPassword: root
+  database: polyglotdb
+  port: 3306
+
+mongo:
+  image: mongo:6
+  port: 27017

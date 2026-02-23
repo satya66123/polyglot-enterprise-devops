@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python
+  labels:
+    app: python
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+        - name: python
+          image: "{{ .Values.image.python.repository }}:{{ .Values.image.python.tag }}"
+          imagePullPolicy: {{ .Values.image.python.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.python.port }}
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MONGO_HOST
+              value: mongo
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python
+  labels:
+    app: python
+spec:
+  type: {{ .Values.service.python.type }}
+  selector:
+    app: python
+  ports:
+    - port: {{ .Values.service.python.port }}
+      targetPort: {{ .Values.service.python.port }}
